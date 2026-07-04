@@ -1,0 +1,25 @@
+{
+	"name": "kitoncli",
+	"version": "1.0.0",
+	"description": "A collective cli for different frameworks, tools, auth, db, etc.",
+	"license": "ISC",
+	"author": "Kirtan Patel",
+	"type": "module",
+	"main": "src/index.ts",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"start": "tsx src/index.ts"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "^11.0.4",
+		"@types/node": "^26.0.1",
+		"ts-node": "^10.9.2",
+		"tsx": "^4.22.4",
+		"typescript": "^6.0.3"
+	},
+	"dependencies": {
+		"@clack/prompts": "^1.6.0",
+		"fs-extra": "^11.3.5",
+		"picocolors": "^1.1.1"
+	}
+}
