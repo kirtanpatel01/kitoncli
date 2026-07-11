@@ -7,5 +7,5 @@ export async function askProjectName() {
 		defaultValue: ".",
 	});
 
-  return value || ".";
+	return value || ".";
 }
