@@ -5,7 +5,7 @@ import { askFramework } from "./prompts/framework.js";
 import { askPackageManager } from "./prompts/package-manager.js";
 import { askProjectName } from "./prompts/project-name.js";
 import { getInstaller } from "./installers/index.js";
-import { getDefaultPlugins, runPlugins } from "./plugins/index.js";
+import { applyMapping, mappings } from "./core/mappings/index.js";
 
 intro(pc.green("🚀 Welcome to KitonCLI"));
 
@@ -26,6 +26,8 @@ const installer = getInstaller(framework);
 
 await installer.install(context);
 
-await runPlugins(context, getDefaultPlugins(context));
+for (const mapping of mappings) {
+	applyMapping(mapping, context);
+}
 
 outro(pc.green("Done!"));

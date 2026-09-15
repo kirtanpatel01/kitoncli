@@ -13,9 +13,3 @@ export interface FrameworkInstaller {
 	label: string;
 	install(context: ProjectContext): Promise<void>;
 }
-
-export interface ProjectPlugin {
-	id: string;
-	label: string;
-	apply(context: ProjectContext): Promise<void>;
-}
